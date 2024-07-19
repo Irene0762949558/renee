@@ -1,65 +1,97 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IRENE LODGE</title>
-<style>
-    body{
+    <style>
+        body {
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url('index.jpg');
+            font-family: Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
 
-    text-align:center;
-    background-size: cover;
-    background-image: url(index.jpg);
-    }
-   
+        .container {
+            background-color: rgba(255, 192, 203, 0.8); /* Pink background with opacity */
+            padding: 20px;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    h3{
-        color: brown;
-    }
-    
+        h1, h3 {
+            color: brown;
+        }
 
-    
-</style>
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: brown;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a0522d; /* Darker brown */
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .radio-group input {
+            margin: 0 10px;
+        }
+    </style>
 </head>
-<body bgcolor="pink">
-    <i><marquee><h1 style="color: brown;">WELCOME IRENE LODGE</h1></marquee><br><br></i>
-        <input type="text" placeholder="First name"><br><br>
-        <input type="text" placeholder="Last name"><br><br>
-        <input type="text" placeholder="phone number"><br><br>
-        <input type="text" placeholder="Email"><br><br>
-        <input type="submit" placeholder="Register"><br><br>
-        <onclick="validate()">
-        
-
-    
-    
-
-Gender
-<input type="radio" name="sex" value="Male">Male
-<input type="radio" name="sex" value="Female">Female<br><br>
-
-DAYS TO STAY
-<select>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-</select><br><br>
-
-CHOOSE TYPE OF ROOM
-<select>
-    <option>MASTER ROOM</option>
-    <option>VVIP ROOM</option>
-    <option>VIP ROOM</option>
-    <option>REGULAR ROOM</option>
-    <option>ROOM WITHOUT BATH</option>
-</select><br><br>
-
-
-
-
-
-
-
+<body>
+    <div class="container">
+        <i><marquee><h1>WELCOME TO IRENE LODGE</h1></marquee></i>
+        <form>
+            <input type="text" placeholder="First name"><br>
+            <input type="text" placeholder="Last name"><br>
+            <input type="text" placeholder="Phone number"><br>
+            <input type="text" placeholder="Email"><br>
+            <div class="radio-group">
+                Gender:
+                <input type="radio" name="sex" value="Male">Male
+                <input type="radio" name="sex" value="Female">Female
+            </div>
+            <label for="days">DAYS TO STAY:</label>
+            <select id="days">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select><br>
+            <label for="room">CHOOSE TYPE OF ROOM:</label>
+            <select id="room">
+                <option value="master">MASTER ROOM</option>
+                <option value="vvip">VVIP ROOM</option>
+                <option value="vip">VIP ROOM</option>
+                <option value="regular">REGULAR ROOM</option>
+                <option value="without-bath">ROOM WITHOUT BATH</option>
+            </select><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
 </body>
 </html>
